@@ -16,7 +16,7 @@ function mapStateToProp(state){
   }
 }
 
-class App extends Component {
+export class App extends Component {
   
   fetchData = (event) => {
 
@@ -43,7 +43,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('render plot')
     var currentTemp = 'not loaded yet';
     
     if (this.props.redux.getIn(['data', 'list'])){
@@ -54,7 +53,7 @@ class App extends Component {
       <div>
         <h1>Weather</h1>
         <form onSubmit={this.fetchData}>
-          <label>I want to know the weather for
+          <label>I want to know the today weather for
             <input 
               type="text" 
               placeholder={"City, Country"}

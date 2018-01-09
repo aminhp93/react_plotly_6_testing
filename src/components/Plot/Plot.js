@@ -44,3 +44,4 @@ export default class Plot extends Component {
 	}
 
 }
+
